@@ -14,5 +14,5 @@ A repository for collecting and summarizing influential AI papers.
 
 This repository is organized by language. Please choose your preferred language above to see the list of papers, summaries, and notes.
 
-* **`/español`**: Contenido en Español.
-* **`/english`**: Content in English.
+* **`/es`**: Contenido en Español.
+* **`/en`**: Content in English.
