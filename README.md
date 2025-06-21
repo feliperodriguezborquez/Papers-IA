@@ -1,9 +1,3 @@
-<p align="center">
-  <img src="banner.png" alt="Banner de Papers-IA"/>
-</p>
-
-<div align="center">
-
 # 🤖 Papers-IA
 
 <p>
