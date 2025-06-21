@@ -1,6 +1,5 @@
 <p align="center">
-  <img src="[![image](https://github.com/user-attachments/assets/16f4dedd-8412-4cb9-80fe-235a2009244c)](https://www.flaticon.es/icono-gratis/inteligencia-artificial_4520703?term=red+neuronal&page=1&position=8&origin=tag&related_id=4520703)
-" alt="Banner de Papers-IA"/>
+  <img src="banner.png" alt="Banner de Papers-IA"/>
 </p>
 
 <div align="center">
