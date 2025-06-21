@@ -1,16 +1,25 @@
-<p align="center">
-  <img src="URL_DE_TU_IMAGEN_AQUI" alt="Papers-IA Banner"/>
-</p>
+# 🧠 Papers-IA
 
-<h1 align="center">Papers-IA</h1>
-
-<p align="center">
-  A personal knowledge base of influential artificial intelligence papers.
-</p>
+> A curated collection of the most important AI papers.
+> Una colección curada de los papers más importantes de IA.
 
 ---
 
-| Español 🇪🇸 | English 🇬🇧 |
-| :---: | :---: |
-| Explora la colección de papers con resúmenes y notas en español. | Explore the collection of papers with summaries and notes in English. |
-| [**Entrar al sitio en Español**](./es/README.md) | [**Enter English Site**](./en/README.md) |
+<p align="center">
+  Please select your language to continue:
+  <br>
+  <em>Por favor, selecciona tu idioma para continuar:</em>
+  <br>
+  <br>
+  <a href="./es/README.md">
+    <img src="https://hatscripts.github.io/circle-flags/flags/es.svg" width="48">
+    <br>
+    <strong>Español</strong>
+  </a>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <a href="./en/README.md">
+    <img src="https://hatscripts.github.io/circle-flags/flags/gb.svg" width="48">
+    <br>
+    <strong>English</strong>
+  </a>
+</p>
