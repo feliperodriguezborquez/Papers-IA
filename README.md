@@ -1,18 +1,16 @@
-# 🤖 Papers-IA
+<p align="center">
+  <img src="URL_DE_TU_IMAGEN_AQUI" alt="Papers-IA Banner"/>
+</p>
 
-A repository for collecting and summarizing influential AI papers.
+<h1 align="center">Papers-IA</h1>
 
-### Select Language / Seleccionar Idioma
-
-[![Visitar sitio en Español](https://img.shields.io/badge/Language-Español-blue?style=for-the-badge)](./es/README.md)
-
-[![Visit English Site](https://img.shields.io/badge/Language-English-green?style=for-the-badge)](./en/README.md)
+<p align="center">
+  A personal knowledge base of influential artificial intelligence papers.
+</p>
 
 ---
 
-### About the Project
-
-This repository is organized by language. Please choose your preferred language above to see the list of papers, summaries, and notes.
-
-* **`/es`**: Contenido en Español.
-* **`/en`**: Content in English.
+| Español 🇪🇸 | English 🇬🇧 |
+| :---: | :---: |
+| Explora la colección de papers con resúmenes y notas en español. | Explore the collection of papers with summaries and notes in English. |
+| [**Entrar al sitio en Español**](./es/README.md) | [**Enter English Site**](./en/README.md) |
