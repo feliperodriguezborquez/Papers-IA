@@ -10,7 +10,7 @@ Una colección curada de los papers más influyentes que han definido el panoram
 - **Autores:** Ashish Vaswani, et al.
 - **Año:** 2017
 - **Publicación:** [arXiv:1706.03762](https://arxiv.org/pdf/1706.03762)
-- **Resumen** Introdujo la arquitectura **Transformer** (encoder-decoder), ocupando como única base el mecanismo de atención, prescindiendo así de las antiguas RNNs. Además, realizó toda la ingeniería necesaria para que el modelo sea funcional. Sentó las bases para los modernos LLMs.
+- **Resumen:** Introdujo la arquitectura **Transformer** (encoder-decoder), ocupando como única base el mecanismo de atención, prescindiendo así de las antiguas RNNs. Además, realizó toda la ingeniería necesaria para que el modelo sea funcional. Sentó las bases para los modernos LLMs.
 
 ---
 
