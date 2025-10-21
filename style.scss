@@ -1,0 +1,87 @@
+// assets/css/style.scss
+
+// Importa los estilos base del tema jekyll-theme-minimal.
+// Jekyll sabe dónde encontrar este archivo porque 'minimal' es el nombre del tema.
+@import "minimal";
+
+// --- Variables y Estilos para Modo Oscuro ---
+
+// Define variables CSS para los colores en modo claro (por defecto)
+:root {
+  --page-bg: #ffffff; // Fondo de la página
+  --text-color: #333333; // Color de texto general
+  --link-color: #0366d6; // Color de los enlaces
+  --border-color: #e1e4e8; // Color de los bordes
+  --code-bg: #f6f8fa; // Fondo de bloques de código
+  --code-text: #24292e; // Color de texto en bloques de código
+  --header-bg: #f6f8fa; // Fondo del encabezado (si el tema lo tiene)
+}
+
+// Estilos para modo oscuro usando la media query prefers-color-scheme
+// Esto se activará automáticamente si el usuario tiene el modo oscuro configurado en su sistema.
+@media (prefers-color-scheme: dark) {
+  :root {
+    --page-bg: #22272e; // Fondo oscuro
+    --text-color: #adbac7; // Texto claro
+    --link-color: #539bf5; // Azul más claro para enlaces
+    --border-color: #444c56; // Borde más oscuro
+    --code-bg: #2d333b; // Fondo de código más oscuro
+    --code-text: #adbac7; // Texto de código claro
+    --header-bg: #2d333b; // Fondo de encabezado más oscuro
+  }
+}
+
+// Aplica las variables a los elementos HTML
+body {
+  background-color: var(--page-bg);
+  color: var(--text-color);
+}
+
+a {
+  color: var(--link-color);
+}
+
+// El tema minimal usa .markdown-body para el contenedor principal del contenido.
+// Aseguramos que su fondo y texto también respeten el modo oscuro.
+.markdown-body {
+  background-color: var(--page-bg);
+  color: var(--text-color);
+  border-color: var(--border-color);
+}
+
+// Elementos específicos del tema minimal que podrían necesitar ajustes de color
+.site-header, .site-footer {
+  background-color: var(--header-bg);
+  color: var(--text-color);
+}
+
+// Bloques de código
+pre, code {
+  background-color: var(--code-bg);
+  color: var(--code-text);
+  border-color: var(--border-color); // Añade color de borde para consistencia
+}
+
+// --- Estilos personalizados para los botones de selección de idioma ---
+.language-buttons {
+  display: flex;
+  flex-wrap: wrap; // Permite que los botones se envuelvan en pantallas pequeñas
+  justify-content: center;
+  gap: 15px; // Espacio entre los botones
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.language-buttons a {
+  text-decoration: none; // Elimina el subrayado de los badges (imágenes)
+}
+
+// Mejora la tipografía general para un aspecto "más bonito"
+h1, h2, h3, h4, h5, h6 {
+  color: var(--text-color); // Asegura que los títulos respeten el modo oscuro
+}
+
+blockquote {
+  border-left-color: var(--link-color); // Usa el color de enlace para el borde de las citas
+  color: var(--text-color);
+}
