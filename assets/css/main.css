@@ -1,0 +1,128 @@
+/* --- Variables de Color (Modo Claro y Oscuro) --- */
+:root {
+  --background-color: #f4f4f9;
+  --text-color: #333;
+  --header-color: #222;
+  --link-color: #007bff;
+  --card-bg-color: #ffffff;
+  --card-border-color: #ddd;
+  --card-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  --button-toggle-bg: #fff;
+}
+
+[data-theme='dark'] {
+  --background-color: #121212;
+  --text-color: #e0e0e0;
+  --header-color: #ffffff;
+  --link-color: #64b5f6;
+  --card-bg-color: #1e1e1e;
+  --card-border-color: #444;
+  --card-shadow: 0 4px 12px rgba(0,0,0,0.4);
+  --button-toggle-bg: #333;
+}
+
+/* --- Estilos Generales --- */
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  margin: 0;
+  padding: 2rem 1rem;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  transition: background-color 0.3s, color 0.3s;
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+h1, h2, h3 {
+  color: var(--header-color);
+  font-weight: 600;
+}
+
+h1 { font-size: 2.5rem; }
+h2 { font-size: 1.8rem; border-bottom: 2px solid var(--card-border-color); padding-bottom: 0.5rem; margin-top: 2.5rem; }
+
+a {
+  color: var(--link-color);
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
+
+a:hover {
+  opacity: 0.8;
+  text-decoration: underline;
+}
+
+/* --- Estilos de Secciones --- */
+.site-header, .language-selector, .featured-papers {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.language-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+/* --- Grid de Papers --- */
+.papers-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  text-align: left;
+  margin-top: 2rem;
+}
+
+.paper-card {
+  background-color: var(--card-bg-color);
+  border: 1px solid var(--card-border-color);
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: var(--card-shadow);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.paper-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+}
+
+.paper-card h3 {
+  margin-top: 0;
+}
+
+.paper-card .links {
+  margin-top: 1rem;
+  display: flex;
+  gap: 1.5rem;
+  font-weight: 500;
+}
+
+/* --- Botón de Tema --- */
+#theme-toggle {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: var(--button-toggle-bg);
+  color: var(--text-color);
+  border: 1px solid var(--card-border-color);
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  font-size: 24px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--card-shadow);
+  transition: transform 0.2s;
+}
+
+#theme-toggle:hover {
+  transform: scale(1.1);
+}
