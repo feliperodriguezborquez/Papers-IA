@@ -1,20 +1,19 @@
 ---
 layout: default
 ---
+<div style="text-align: center;">
+
 # 🤖 Papers-IA
 
-<p>
-  <strong>EN:</strong> A personal knowledge base for collecting, summarizing, and understanding influential Artificial Intelligence papers.
-  <br>
-  <strong>ES:</strong> Una base de conocimiento personal para coleccionar, resumir y entender papers influyentes sobre Inteligencia Artificial.
-</p>
+Una base de conocimiento para coleccionar, resumir y entender papers influyentes sobre Inteligencia Artificial.
+
+</div>
 
 ---
 
-## Select Language / Seleccionar Idioma
+## Explorar por Idioma
 
-<p>Inside you will find summaries, key takeaways, and direct links to the papers.</p>
-<p><em>Adentro encontrarás resúmenes, puntos clave y enlaces directos a los papers.</em></p>
+<p>Navega por la colección completa de resúmenes en tu idioma preferido.</p>
 
 <div class="language-buttons">
   [![Visitar sitio en Español](https://img.shields.io/badge/Language-Español-blue?style=for-the-badge)](es/)
@@ -23,8 +22,23 @@ layout: default
 
 ---
 
-### 💡 Contributions / Contribuciones
+## 🚀 Papers Destacados
 
-**EN:** Suggestions are welcome! If you want to recommend a paper, please [open an issue](https://github.com/feliperodriguezborquez/Papers-IA/issues).
-<br>
-**ES:** ¡Las sugerencias son bienvenidas! Si quieres recomendar un paper, por favor [abre un "issue"](https://github.com/feliperodriguezborquez/Papers-IA/issues).
+<div class="featured-papers-container">
+  <div class="paper-card">
+    <h3>Attention Is All You Need</h3>
+    <p>El paper que introdujo la arquitectura Transformer, la base de los modelos de lenguaje modernos como GPT y BERT.</p>
+    <div class="links">
+      <a href="es/#attention-is-all-you-need">Leer en Español</a>
+      <a href="en/#attention-is-all-you-need">Read in English</a>
+    </div>
+  </div>
+  <div class="paper-card">
+    <h3>Language Models are Few-Shot Learners (GPT-3)</h3>
+    <p>Demostró el poder del "in-context learning" en modelos a gran escala, cambiando cómo interactuamos con la IA.</p>
+    <div class="links">
+      <a href="es/#language-models-are-few-shot-learners-gpt-3">Leer en Español</a>
+      <a href="en/#language-models-are-few-shot-learners-gpt-3">Read in English</a>
+    </div>
+  </div>
+</div>

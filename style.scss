@@ -85,3 +85,33 @@ blockquote {
   border-left-color: var(--link-color); // Usa el color de enlace para el borde de las citas
   color: var(--text-color);
 }
+
+// --- Estilos para la sección de Papers Destacados ---
+.featured-papers-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); // Diseño de rejilla responsivo
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.paper-card {
+  background-color: var(--code-bg); // Reutilizamos el color de fondo del código para consistencia
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 20px;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.paper-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.paper-card h3 {
+  margin-top: 0;
+}
+
+.paper-card .links a {
+  margin-right: 15px;
+  font-weight: bold;
+}
