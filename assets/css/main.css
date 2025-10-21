@@ -23,6 +23,16 @@
   --button-toggle-bg: #444; /* Lighter toggle button */
 }
 
+[data-theme='true-dark'] {
+  --background-color: #121212; /* Original black */
+  --text-color: #e0e0e0;
+  --header-color: #ffffff;
+  --link-color: #64b5f6;
+  --card-bg-color: #1e1e1e; /* Original dark card */
+  --card-border-color: #444;
+  --card-shadow: 0 4px 12px rgba(0,0,0,0.4);
+}
+
 /* --- Estilos Generales --- */
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
@@ -99,6 +109,17 @@ a:hover {
   box-shadow: var(--card-hover-shadow); /* Apply new variable here too */
 }
 
+/* New styles for making the card a link */
+.paper-card-link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+.paper-card-link:hover {
+  text-decoration: none; /* Prevent underline on the whole card */
+}
+
 .paper-card h3 {
   margin-top: 0;
 }
@@ -108,6 +129,11 @@ a:hover {
   display: flex;
   gap: 1.5rem;
   font-weight: 500;
+}
+
+.paper-card .links .internal-link {
+  color: var(--link-color);
+  z-index: 2; /* Ensure it's clickable over the card link */
 }
 
 /* --- Botón de Tema --- */

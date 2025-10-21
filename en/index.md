@@ -1,5 +1,6 @@
 ---
 layout: default
+lang: en
 ---
 # 📚 Foundational Papers in Modern AI
 
@@ -12,7 +13,7 @@ A curated collection of the most influential papers that have defined the landsc
   <section class="paper-category">
     <h2>🤖 Transformer Architectures and Language Models (LLMs)</h2>
 
-    <div class="paper-item" data-category="LLMs, Transformers">
+    <div class="paper-item" id="attention-is-all-you-need" data-category="LLMs, Transformers">
       <h3>Attention Is All You Need</h3>
       <p class="paper-meta">
         <strong>Authors:</strong> Ashish Vaswani, et al.<br>
@@ -22,7 +23,7 @@ A curated collection of the most influential papers that have defined the landsc
       <p class="paper-summary">Introduces the **Transformer** architecture, based solely on attention mechanisms. It eliminated the need for recurrence (RNNs) and allowed for massive parallelization, laying the groundwork for most modern language models like GPT and BERT.</p>
     </div>
 
-    <div class="paper-item" data-category="LLMs, Few-Shot Learning">
+    <div class="paper-item" id="gpt3" data-category="LLMs, Few-Shot Learning">
       <h3>Language Models are Few-Shot Learners (GPT-3)</h3>
       <p class="paper-meta">
         <strong>Authors:</strong> Tom B. Brown, et al.<br>
@@ -35,9 +36,3 @@ A curated collection of the most influential papers that have defined the landsc
   </section>
 
 </div>
-
-### Language Models are Few-Shot Learners (GPT-3)
-- **Authors:** Tom B. Brown, et al.
-- **Year:** 2020
-- **Publication:** [arXiv:2005.14165](https://arxiv.org/pdf/2005.14165)
-- **Quick Summary:** Took LLMs to an unprecedented scale (175 billion parameters). It introduced the concept of "in-context learning" or *few-shot* learning, where the model can learn to perform a task just by seeing a few examples in the prompt.

@@ -5,3 +5,26 @@ description: Una base de conocimiento personal para coleccionar, resumir y enten
 # Esto ayuda a que los enlaces entre archivos .md funcionen correctamente en el sitio generado.
 plugins:
   - jekyll-relative-links
+
+# --- Configuración de Papers Destacados ---
+# Añade aquí los papers que quieres que aparezcan en la página principal.
+# El 'id' debe coincidir con el id del div del paper en es/index.md y en/index.md.
+featured_papers:
+  - id: "attention-is-all-you-need"
+    title: "Attention Is All You Need"
+    summary_es: "El paper que introdujo la arquitectura Transformer, la base de los modelos de lenguaje modernos como GPT y BERT."
+    summary_en: "The paper that introduced the Transformer architecture, the foundation of modern language models like GPT and BERT."
+
+  - id: "gpt3"
+    title: "Language Models are Few-Shot Learners (GPT-3)"
+    summary_es: "Demostró el poder del 'in-context learning' en modelos a gran escala, cambiando cómo interactuamos con la IA."
+    summary_en: "Demonstrated the power of 'in-context learning' in large-scale models, changing how we interact with AI."
+
+# --- Textos de la Interfaz (para fácil traducción y mantenimiento) ---
+ui_text:
+  es:
+    featured_papers_title: "🚀 Papers Destacados"
+    read_in_english: "Read in English"
+  en:
+    featured_papers_title: "🚀 Featured Papers"
+    read_in_english: "Read in English" # This is just for consistency, not used on spanish page

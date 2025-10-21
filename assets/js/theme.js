@@ -1,24 +1,38 @@
 document.addEventListener('DOMContentLoaded', () => {
   const themeToggle = document.getElementById('theme-toggle');
-  const currentTheme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+  const themes = ['light', 'dark', 'true-dark'];
+  const icons = {
+    light: '☁️', // Next is soft-dark
+    dark: '🌙', // Next is true-dark
+    'true-dark': '☀️' // Next is light
+  };
+
+  // Get initial theme
+  let currentTheme = localStorage.getItem('theme') || 'light';
+  if (!themes.includes(currentTheme)) {
+      // Fallback for old 'dark' value or invalid values
+      const isSystemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      currentTheme = isSystemDark ? 'dark' : 'light';
+  }
   
   // Aplicar tema al cargar la página
-  if (currentTheme === 'dark') {
-    document.documentElement.setAttribute('data-theme', 'dark');
-    themeToggle.textContent = '☀️';
-  } else {
-    document.documentElement.setAttribute('data-theme', 'light');
-    themeToggle.textContent = '🌙';
+  function applyTheme(theme) {
+    document.documentElement.setAttribute('data-theme', theme);
+    themeToggle.textContent = icons[theme];
+    localStorage.setItem('theme', theme);
   }
+
+  applyTheme(currentTheme);
 
   // Evento al hacer clic en el botón
   themeToggle.addEventListener('click', () => {
-    let newTheme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
-    document.documentElement.setAttribute('data-theme', newTheme);
-    localStorage.setItem('theme', newTheme);
-    
-    // Cambiar ícono del botón
-    themeToggle.textContent = newTheme === 'dark' ? '☀️' : '🌙';
+    const currentTheme = document.documentElement.getAttribute('data-theme');
+    const currentIndex = themes.indexOf(currentTheme);
+    // Cycle to the next theme in the array
+    const nextIndex = (currentIndex + 1) % themes.length;
+    const newTheme = themes[nextIndex];
+
+    applyTheme(newTheme);
   });
 
   // Funcionalidad de Búsqueda
