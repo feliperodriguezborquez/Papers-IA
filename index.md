@@ -1,3 +1,6 @@
+---
+layout: default
+---
 # 🤖 Papers-IA
 
 <p>
