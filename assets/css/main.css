@@ -7,18 +7,20 @@
   --card-bg-color: #ffffff;
   --card-border-color: #ddd;
   --card-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  --card-hover-shadow: 0 8px 16px rgba(0,0,0,0.15);
   --button-toggle-bg: #fff;
 }
 
 [data-theme='dark'] {
-  --background-color: #121212;
+  --background-color: #282c34; /* Dark blue-grey, less black */
   --text-color: #e0e0e0;
   --header-color: #ffffff;
   --link-color: #64b5f6;
-  --card-bg-color: #1e1e1e;
-  --card-border-color: #444;
-  --card-shadow: 0 4px 12px rgba(0,0,0,0.4);
-  --button-toggle-bg: #333;
+  --card-bg-color: #3a3f4b; /* Slightly lighter dark for cards */
+  --card-border-color: #555; /* Lighter border */
+  --card-shadow: 0 4px 12px rgba(0,0,0,0.6); /* More pronounced shadow for dark mode */
+  --card-hover-shadow: 0 8px 16px rgba(0,0,0,0.8); /* More pronounced hover shadow */
+  --button-toggle-bg: #444; /* Lighter toggle button */
 }
 
 /* --- Estilos Generales --- */
@@ -88,8 +90,13 @@ a:hover {
 }
 
 .paper-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+  transform: translateY(-5px); /* Keep existing transform */
+  box-shadow: var(--card-hover-shadow); /* Use new variable for consistency */
+}
+
+/* Adjustments for existing .papers-grid and .paper-card in index.md */
+.papers-grid .paper-card:hover {
+  box-shadow: var(--card-hover-shadow); /* Apply new variable here too */
 }
 
 .paper-card h3 {
@@ -125,4 +132,82 @@ a:hover {
 
 #theme-toggle:hover {
   transform: scale(1.1);
+}
+
+/* --- Estilos de Búsqueda --- */
+.search-section {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+#paper-search {
+  width: 100%;
+  max-width: 600px;
+  padding: 0.8rem 1rem;
+  font-size: 1rem;
+  border: 1px solid var(--card-border-color);
+  border-radius: 8px;
+  background-color: var(--card-bg-color);
+  color: var(--text-color);
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+#paper-search::placeholder { /* Style placeholder text */
+  color: var(--text-color);
+  opacity: 0.7;
+}
+
+#paper-search:focus {
+  outline: none;
+  border-color: var(--link-color);
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25); /* A light blue shadow */
+}
+
+/* --- Estilos para Listado de Papers (es/en/index.md) --- */
+.papers-list {
+  margin-top: 2rem;
+}
+
+.paper-category {
+  margin-bottom: 2rem; /* Spacing between categories */
+}
+
+.paper-category h2 {
+  margin-top: 3rem;
+  text-align: left; /* Override center alignment from general h2 */
+  border-bottom: 2px solid var(--card-border-color); /* Keep the border */
+  padding-bottom: 0.5rem;
+}
+
+.paper-item {
+  background-color: var(--card-bg-color);
+  border: 1px solid var(--card-border-color);
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem; /* Spacing between paper items */
+  box-shadow: var(--card-shadow);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.paper-item:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--card-hover-shadow); /* Use new variable */
+}
+
+/* Specific styles for content within paper-item */
+.paper-item h3 {
+  margin-top: 0;
+  font-size: 1.5rem;
+}
+
+.paper-item .paper-meta {
+  font-size: 0.9rem;
+  color: var(--text-color); /* Ensure meta text is readable */
+  margin-bottom: 1rem;
+  line-height: 1.4; /* Better readability for meta info */
+}
+
+.paper-item .paper-summary {
+  margin-top: 1rem;
 }

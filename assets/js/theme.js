@@ -20,4 +20,23 @@ document.addEventListener('DOMContentLoaded', () => {
     // Cambiar ícono del botón
     themeToggle.textContent = newTheme === 'dark' ? '☀️' : '🌙';
   });
+
+  // Funcionalidad de Búsqueda
+  const searchInput = document.getElementById('paper-search');
+  if (searchInput) {
+    searchInput.addEventListener('keyup', (event) => {
+      const searchTerm = event.target.value.toLowerCase();
+      // Target .paper-item elements for filtering
+      const paperItems = document.querySelectorAll('.paper-item');
+
+      paperItems.forEach(item => {
+        const textContent = item.textContent.toLowerCase();
+        if (textContent.includes(searchTerm)) {
+          item.style.display = ''; // Show item
+        } else {
+          item.style.display = 'none'; // Hide item
+        }
+      });
+    });
+  }
 });
