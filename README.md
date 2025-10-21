@@ -1,3 +1,6 @@
+---
+layout: default
+---
 # 🤖 Papers-IA
 
 <p>
@@ -17,8 +20,8 @@
 <p>Inside you will find summaries, key takeaways, and direct links to the papers.</p>
 <p><em>Adentro encontrarás resúmenes, puntos clave y enlaces directos a los papers.</em></p>
 
-[![Visitar sitio en Español](https://img.shields.io/badge/Language-Español-blue?style=for-the-badge)](./es/README.md)
-[![Visit English Site](https://img.shields.io/badge/Language-English-green?style=for-the-badge)](./en/README.md)
+[![Visitar sitio en Español](https://img.shields.io/badge/Language-Español-blue?style=for-the-badge)](es/)
+[![Visit English Site](https://img.shields.io/badge/Language-English-green?style=for-the-badge)](en/)
 
 </div>
 

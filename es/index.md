@@ -1,3 +1,6 @@
+---
+layout: default
+---
 # 📚 Papers Fundamentales de la IA Moderna
 
 Una colección curada de los papers más influyentes que han definido el panorama de la Inteligencia Artificial moderna. Ideal para tener una referencia rápida de los pilares teóricos del Deep Learning.

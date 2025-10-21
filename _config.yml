@@ -1,0 +1,7 @@
+theme: jekyll-theme-minimal
+title: Papers-IA
+description: Una base de conocimiento personal para coleccionar, resumir y entender papers influyentes sobre Inteligencia Artificial.
+
+# Esto ayuda a que los enlaces entre archivos .md funcionen correctamente en el sitio generado.
+plugins:
+  - jekyll-relative-links

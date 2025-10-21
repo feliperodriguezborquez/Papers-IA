@@ -1,3 +1,6 @@
+---
+layout: default
+---
 # 📚 Foundational Papers in Modern AI
 
 A curated collection of the most influential papers that have defined the landscape of modern Artificial Intelligence. Ideal for a quick reference to the theoretical pillars of Deep Learning.
