@@ -1,6 +1,6 @@
 theme: jekyll-theme-minimal
-title: Papers-IA
-description: Una base de conocimiento personal para coleccionar, resumir y entender papers influyentes sobre Inteligencia Artificial.
+title: IA en 5 min
+description: Conceptos clave de Inteligencia Artificial explicados de forma simple.
 
 # Esto ayuda a que los enlaces entre archivos .md funcionen correctamente en el sitio generado.
 plugins:
@@ -11,17 +11,9 @@ plugins:
 # El 'id' debe coincidir con el id del div del paper en es/index.md y en/index.md.
 featured_papers:
   - id: "next-token-prediction"
-    title: "Next Token Prediction"
+    title: "Predicción del Siguiente Token"
     summary_es: "Explica el concepto fundamental de cómo los LLMs generan texto: adivinando la siguiente palabra (token) en una secuencia."
     summary_en: "Explains the fundamental concept of how LLMs generate text: by repeatedly guessing the next word (token) in a sequence."
-  - id: "stochastic-parrots"
-    title: "The Danger of Stochastic Parrots"
-    summary_es: "Explora el concepto de 'loros estocásticos' y las implicaciones de que los LLMs generen texto sin una comprensión real."
-    summary_en: "Explores the 'stochastic parrots' concept and the implications of LLMs generating text without true understanding."
-  - id: "tokenization"
-    title: "Tokenization: The Language of LLMs"
-    summary_es: "Aprende qué es un token y por qué es la base para que los LLMs entiendan y generen texto."
-    summary_en: "Learn what a token is and why it's the foundation for how LLMs understand and generate text."
 
 # --- Textos de la Interfaz (para fácil traducción y mantenimiento) ---
 ui_text:

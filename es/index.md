@@ -14,7 +14,7 @@ Una colección curada de los papers más influyentes que han definido el panoram
     <h2>🤖 Arquitecturas Transformer y Modelos de Lenguaje (LLMs)</h2>
 
     <div class="paper-item" id="attention-is-all-you-need" data-category="LLMs, Transformers">
-      <h3>Attention Is All You Need</h3>
+      <h3><a href="papers/attention-is-all-you-need.html">Attention Is All You Need</a></h3>
       <p class="paper-meta">
         <strong>Autores:</strong> Ashish Vaswani, et al.<br>
         <strong>Año:</strong> 2017<br>
@@ -31,6 +31,15 @@ Una colección curada de los papers más influyentes que han definido el panoram
         <strong>Publicación:</strong> <a href="https://arxiv.org/pdf/2005.14165">arXiv:2005.14165</a>
       </p>
       <p class="paper-summary">Llevó los LLMs a una escala sin precedentes (175 mil millones de parámetros). Introdujo el concepto de "in-context learning" o aprendizaje *few-shot*, donde el modelo puede aprender a realizar una tarea con solo ver unos pocos ejemplos en el prompt.</p>
+    </div>
+
+    <div class="paper-item" id="next-token-prediction" data-category="LLMs, Conceptos Fundamentales">
+      <h3><a href="next-token-prediction.html">Predicción del Siguiente Token</a></h3>
+      <p class="paper-meta">
+        <strong>Tipo:</strong> Artículo Explicativo<br>
+        <strong>Concepto Clave:</strong> Generación Autorregresiva
+      </p>
+      <p class="paper-summary">Explica de forma sencilla el motor de todos los LLMs modernos: el bucle de predecir la siguiente palabra (o token), añadirla al texto, y repetir. La base de la IA generativa actual.</p>
     </div>
 
   </section>

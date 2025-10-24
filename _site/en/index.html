@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>📚 Foundational Papers in Modern AI</title>
+
+  <link rel="stylesheet" href="/assets/css/main.css">
+
+</head>
+<body>
+  
+  
+
+  
+  
+  
+  
+
+  <header class="site-header-main">
+    <div class="header-content">
+      <a href="/" class="site-title-link"><h1>IA en 5 min</h1></a>
+      <button id="theme-toggle" title="Cambiar tema">🌙</button>
+    </div>
+  </header>
+
+  <!-- Menús laterales ocultos -->
+  <div id="bibliography-sidebar" class="sidebar left-sidebar">
+    <div class="sidebar-header">
+      <h3>Bibliografía</h3>
+      <button class="close-sidebar-btn" title="Cerrar">&times;</button>
+    </div>
+    <div class="sidebar-content"></div>
+  </div>
+  <div id="definitions-sidebar" class="sidebar right-sidebar">
+    <div class="sidebar-header">
+      <h3>Definiciones</h3>
+      <button class="close-sidebar-btn" title="Cerrar">&times;</button>
+    </div>
+    <div class="sidebar-content"></div>
+  </div>
+
+  <div class="container">
+    
+      <section class="search-section">
+        <input type="text" id="paper-search" placeholder="Buscar papers..." aria-label="Buscar papers">
+      </section>
+    
+
+  <h1 id="-foundational-papers-in-modern-ai">📚 Foundational Papers in Modern AI</h1>
+
+<p>A curated collection of the most influential papers that have defined the landscape of modern Artificial Intelligence. Ideal for a quick reference to the theoretical pillars of Deep Learning.</p>
+
+<hr />
+
+<div class="papers-list">
+
+  <section class="paper-category">
+    <h2>🤖 Transformer Architectures and Language Models (LLMs)</h2>
+
+    <div class="paper-item" id="attention-is-all-you-need" data-category="LLMs, Transformers">
+      <h3>Attention Is All You Need</h3>
+      <p class="paper-meta">
+        <strong>Authors:</strong> Ashish Vaswani, et al.<br />
+        <strong>Year:</strong> 2017<br />
+        <strong>Publication:</strong> <a href="https://arxiv.org/pdf/1706.03762">arXiv:1706.03762</a>
+      </p>
+      <p class="paper-summary">Introduces the **Transformer** architecture, based solely on attention mechanisms. It eliminated the need for recurrence (RNNs) and allowed for massive parallelization, laying the groundwork for most modern language models like GPT and BERT.</p>
+    </div>
+
+    <div class="paper-item" id="gpt3" data-category="LLMs, Few-Shot Learning">
+      <h3>Language Models are Few-Shot Learners (GPT-3)</h3>
+      <p class="paper-meta">
+        <strong>Authors:</strong> Tom B. Brown, et al.<br />
+        <strong>Year:</strong> 2020<br />
+        <strong>Publication:</strong> <a href="https://arxiv.org/pdf/2005.14165">arXiv:2005.14165</a>
+      </p>
+      <p class="paper-summary">Took LLMs to an unprecedented scale (175 billion parameters). It introduced the concept of "in-context learning" or *few-shot* learning, where the model can learn to perform a task just by seeing a few examples in the prompt.</p>
+    </div>
+
+    <div class="paper-item" id="next-token-prediction" data-category="LLMs, Core Concepts">
+      <h3><a href="next-token-prediction.html">Next Token Prediction</a></h3>
+      <p class="paper-meta">
+        <strong>Type:</strong> Explanatory Article<br />
+        <strong>Key Concept:</strong> Autoregressive Generation
+      </p>
+      <p class="paper-summary">Simply explains the engine of all modern LLMs: the loop of predicting the next word (or token), adding it to the text, and repeating. The foundation of today's generative AI.</p>
+    </div>
+
+  </section>
+
+</div>
+
+
+  
+  </div>
+
+  <script src="/assets/js/theme.js"></script>
+  <script src="/assets/js/interactive.js"></script>
+</body>
+</html>

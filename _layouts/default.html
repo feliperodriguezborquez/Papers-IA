@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="es" data-theme="light">
+<html lang="es" data-theme="dark">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Papers-IA</title>
+  <title>{{ page.title | default: site.title }}</title>
 
   <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
 
@@ -13,6 +13,48 @@
   {% if lang != 'es' and lang != 'en' %}
     {% assign lang = 'es' %}
   {% endif %}
+
+  {% comment %} --- Lógica para el selector de idioma --- {% endcomment %}
+  {% assign other_lang_page = nil %}
+  {% if page.layout == 'default' and page.url != "/" %}
+    {% assign post_slug = page.path | split: '/' | last | replace: '.md', '' %}
+    {% if lang == 'es' %}
+      {% assign other_lang = 'en' %}
+      {% assign other_lang_text = 'Read in English' %}
+      {% assign other_lang_url = '/en/' | append: post_slug | append: '.html' %}
+    {% else %}
+      {% assign other_lang = 'es' %}
+      {% assign other_lang_text = 'Leer en Español' %}
+      {% assign other_lang_url = '/es/' | append: post_slug | append: '.html' %}
+    {% endif %}
+    {% assign other_lang_page = site.pages | where: "url", other_lang_url | first %}
+  {% endif %}
+  {% comment %}
+    La variable `other_lang_page` contendrá la página en el otro idioma si existe.
+  {% endcomment %}
+
+  <header class="site-header-main">
+    <div class="header-content">
+      <a href="{{ '/' | relative_url }}" class="site-title-link"><h1>IA en 5 min</h1></a>
+      <button id="theme-toggle" title="Cambiar tema">🌙</button>
+    </div>
+  </header>
+
+  <!-- Menús laterales ocultos -->
+  <div id="bibliography-sidebar" class="sidebar left-sidebar">
+    <div class="sidebar-header">
+      <h3>Bibliografía</h3>
+      <button class="close-sidebar-btn" title="Cerrar">&times;</button>
+    </div>
+    <div class="sidebar-content"></div>
+  </div>
+  <div id="definitions-sidebar" class="sidebar right-sidebar">
+    <div class="sidebar-header">
+      <h3>Definiciones</h3>
+      <button class="close-sidebar-btn" title="Cerrar">&times;</button>
+    </div>
+    <div class="sidebar-content"></div>
+  </div>
 
   <div class="container">
     {% if page.url == "/es/" or page.url == "/en/" %}
@@ -27,12 +69,12 @@
     <section class="featured-papers">
       <h2>{{ site.ui_text[lang].featured_papers_title }}</h2>
       <div class="papers-grid">
-        {% for paper in site.featured_papers %}
-          <a href="es/#{{ paper.id }}" class="paper-card-link">
+        {% for paper in site.featured_papers %} {% comment %} El enlace ahora va directo al post {% endcomment %}
+          <a href="{{ '/es/' | append: paper.id | append: '.html' | relative_url }}" class="paper-card-link">
             <div class="paper-card">
               <h3>{{ paper.title }}</h3>
               <p>{{ paper.summary_es }}</p>
-              <div class="links">
+              <div class="links" style="display: none;">
                 <span class="internal-link">{{ site.ui_text[lang].read_in_english }}</span>
               </div>
             </div>
@@ -44,6 +86,6 @@
   </div>
 
   <script src="{{ '/assets/js/theme.js' | relative_url }}"></script>
-
+  <script src="{{ '/assets/js/interactive.js' | relative_url }}"></script>
 </body>
 </html>

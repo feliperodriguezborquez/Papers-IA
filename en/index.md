@@ -33,6 +33,15 @@ A curated collection of the most influential papers that have defined the landsc
       <p class="paper-summary">Took LLMs to an unprecedented scale (175 billion parameters). It introduced the concept of "in-context learning" or *few-shot* learning, where the model can learn to perform a task just by seeing a few examples in the prompt.</p>
     </div>
 
+    <div class="paper-item" id="next-token-prediction" data-category="LLMs, Core Concepts">
+      <h3><a href="next-token-prediction.html">Next Token Prediction</a></h3>
+      <p class="paper-meta">
+        <strong>Type:</strong> Explanatory Article<br>
+        <strong>Key Concept:</strong> Autoregressive Generation
+      </p>
+      <p class="paper-summary">Simply explains the engine of all modern LLMs: the loop of predicting the next word (or token), adding it to the text, and repeating. The foundation of today's generative AI.</p>
+    </div>
+
   </section>
 
 </div>
